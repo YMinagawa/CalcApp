@@ -3,6 +3,7 @@ package jp.techacademy.yoshihiro.minagawa.calcapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         mEditText1 = (EditText)findViewById(R.id.editText1);
+        mEditText1.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_DECIMAL|InputType.TYPE_NUMBER_FLAG_SIGNED);
         mEditText2 = (EditText)findViewById(R.id.editText2);
+        mEditText2.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_DECIMAL|InputType.TYPE_NUMBER_FLAG_SIGNED);
 
         //1:+, 2:-, 3:x, 4:÷
         Button button1 = (Button)findViewById(R.id.button1);
